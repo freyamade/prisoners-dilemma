@@ -78,8 +78,9 @@ abstract class Prisoner {
     /**
      * Reset the state of the Prisoner, by deleting the move counts and last move values.
      * This function is called after two prisoners finish playing against eachother, as these details are recorded for a pair of Prisoners.
+     * Certain Prisoner classes will need to override this method.
      */
-    fun reset() {
+    open fun reset() {
         // Reset the moveCounts
         this.moveCounts = Pair(0, 0)
         // Set the lastMove to null to indicate there was no last move
