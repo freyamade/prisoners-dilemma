@@ -24,7 +24,7 @@ class Majority : Prisoner {
      */
     override fun play(): Boolean {
         val opponentMajority = this.opponent?.getMajority()
-        val move: Boolean = opponentMajority == null ? this.tieMove : opponentMajority
+        val move: Boolean =  if (opponentMajority == null) this.tieMove else opponentMajority
         this.lastMove = move
         return move
     }

@@ -23,8 +23,8 @@ class TitForTat : Prisoner {
      * Make a move by replaying the opponent's last move, or the initially defined firstMove if there is none.
      */
     override fun play(): Boolean {
-        val lastMove = this.opponent?.getLastMove()
-        val move: Boolean = lastMove == null ? this.firstMove : lastMove
+        val lastMove = this.opponent?.lastMove
+        val move: Boolean = if (lastMove == null) this.firstMove else lastMove
         this.lastMove = move
         return move
     }

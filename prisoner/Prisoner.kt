@@ -12,25 +12,25 @@ abstract class Prisoner {
      * This is necessary in two situations; either the strategy needs to know the last move it played
      * or it needs to know the last move its opponent played.
      */
-    private var lastMove: Boolean? = null
+    var lastMove: Boolean? = null
     /**
      * Keeps track of how many of each move was played by the strategy so far.
      * `.first` is the count of defects, and `.second` is the count of cooperates.
      */
-    private var moveCounts: Pair<Int, Int> = Pair(0, 0)
+    var moveCounts: Pair<Int, Int> = Pair(0, 0)
     /**
      * Maintains a reference to the current opponent being faced.
      * Some Prisoners remember moves their opponents use against them to determine moves to make.
      */
-    protected var opponent: Prisoner? = null
+    var opponent: Prisoner? = null
     /**
      * The current score that the strategy has received
      */
-    protected var score: Int = 0
+    var score: Int = 0
     /**
      * Strategy name
      */
-    protected val strategy: String
+    val strategy: String
 
     constructor(strategy: String) {
         this.strategy = strategy
@@ -58,10 +58,10 @@ abstract class Prisoner {
     // Concrete Methods
 
     /**
-     * Get the previously made move by the Prisoner
+     * Add some points to the Prisoner's score
      */
-    fun getLastMove(): Boolean? {
-        return this.lastMove
+    fun addPoints(points: Int) {
+        this.score += points
     }
 
     /**
@@ -79,7 +79,7 @@ abstract class Prisoner {
      * Reset the state of the Prisoner, by deleting the move counts and last move values.
      * This function is called after two prisoners finish playing against eachother, as these details are recorded for a pair of Prisoners.
      */
-    private fun reset() {
+    fun reset() {
         // Reset the moveCounts
         this.moveCounts = Pair(0, 0)
         // Set the lastMove to null to indicate there was no last move
