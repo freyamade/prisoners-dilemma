@@ -12,7 +12,11 @@ fun main() {
         Majority(MajorityType.SOFT),
         Rand(),
         TitForTat(TitForTatType.NASTY),
-        TitForTat(TitForTatType.NICE)
+        TitForTat(TitForTatType.NICE),
+        Periodic(true, true, false),
+        Periodic(true, false),
+        Periodic(false, false, true),
+        Periodic(false, true)
     )
     val bouts: Int = 100
 
