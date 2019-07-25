@@ -43,7 +43,7 @@ abstract class Prisoner {
     /**
      * Convert the Prisoner class into a String
      */
-    override fun toString(): String = "$strategy Prisoner: Score - $score"
+    override fun toString(): String = "$strategy Prisoner"
 
     fun equals(other: Prisoner) = this.strategy.equals(other.strategy)
 
