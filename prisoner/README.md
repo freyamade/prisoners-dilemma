@@ -16,7 +16,7 @@ The follow strategies have no title in the referenced list;
 - [x] Tit For Tat
     - Cooperates on the first move, then copies opponent's last move
     - `TitForTat(NICE)`
-- [ ] Grim Trigger
+- [x] Grim Trigger
     - Cooperates until opponent defects, after which it always defects
 - [ ] Pavlov
     - Cooperates on the first move. If a reward or temptation payoff is received in the last round, then repeats last choice, otherwise uses opposite choice.
