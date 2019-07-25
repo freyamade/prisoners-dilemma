@@ -24,9 +24,8 @@ class TitForTat : Prisoner {
      */
     override fun play(): Boolean {
         val lastMove = this.opponent?.getLastMove()
-        if (lastMove == null) {
-            return this.firstMove
-        }
-        return lastMove
+        val move: Boolean = lastMove == null ? this.firstMove : lastMove
+        this.lastMove = move
+        return move
     }
 }

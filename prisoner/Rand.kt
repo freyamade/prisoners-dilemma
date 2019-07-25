@@ -9,6 +9,8 @@ class Rand() : Prisoner("Random") {
      * Make a move by randomly picking either true or false
      */
     override fun play(): Boolean {
-        return Random.nextBoolean()
+        val move = Random.nextBoolean()
+        this.lastMove = move
+        return move
     }
 }
