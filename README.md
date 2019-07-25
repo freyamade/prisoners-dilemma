@@ -43,3 +43,7 @@ I might look into trying this again, and hopefully doing better.
 
 ## Java Version
 The `java` branch contains the previous Java version that I wrote back in 2016, while the master branch contains my Kotlin version written in 2019, after hopefully becoming better at structuring projects.
+
+## Testing
+One thing I'd like to do now before going any further is test that the strategies I've already implemented actually work as intended.
+Once I get a nice testing system up, it'll make me more confident to come back and add more strategies to the system.
