@@ -14,13 +14,7 @@ fun main() {
         TitForTat(TitForTatType.NICE)
     )
     val bouts: Int = 100
-    for (i in 0..(prisoners.size - 1)) {
-        for (j in (i + 1)..(prisoners.size - 1)) {
-            val match = Match(prisoners[i], prisoners[j], bouts)
-            match.play()
-        }
-    }
-    for (prisoner in prisoners) {
-        println(prisoner)
-    }
+
+    // Create and run a RoundRobin tournament.
+    RoundRobin(prisoners, bouts).run()
 }
