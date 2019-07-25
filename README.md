@@ -40,3 +40,6 @@ Here's a direct copy from the assignment brief;
     Repeat this for a large number of generations. What kind of population mix do you end up with? Do the nice guys come out on top? Does the population stabilise (i.e. no changes in the make-up of successive generations)?
 
 I might look into trying this again, and hopefully doing better.
+
+## Java Version
+The `java` branch contains the previous Java version that I wrote back in 2016, while the master branch contains my Kotlin version written in 2019, after hopefully becoming better at structuring projects.
