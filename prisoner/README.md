@@ -5,10 +5,12 @@ The Prisoner strategies already implemented will be marked off.
 ## No Title
 The follow strategies have no title in the referenced list;
 
-- [ ] Always Cooperate
+- [x] Always Cooperate
     - Cooperates on every move
-- [ ] Always Defect
+    - `Always(true)`
+- [x] Always Defect
     - Defects on every move
+    - `Always(false)`
 - [x] Random Player
     - Makes a random move
 - [x] Tit For Tat

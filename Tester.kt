@@ -8,6 +8,8 @@ import de.freyama.prisoners_dilemma.prisoner.*
 fun main() {
     val prisoners: Array<Prisoner> = arrayOf(
         AdaptiveTitForTat(0.1),
+        Always(true),
+        Always(false),
         Majority(MajorityType.HARD),
         Majority(MajorityType.SOFT),
         Rand(),
