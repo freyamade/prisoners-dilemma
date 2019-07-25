@@ -27,7 +27,7 @@ class RoundRobin(private val prisoners: Array<Prisoner>, private val bouts: Int)
 
         // Print out the prisoners in order.
         for (prisoner in prisoners) {
-            println(prisoner)
+            println("$prisoner\n\tScore: ${prisoner.score}")
         }
     }
 }
