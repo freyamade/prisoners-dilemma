@@ -10,6 +10,7 @@ fun main() {
         AdaptiveTitForTat(0.1),
         Always(true),
         Always(false),
+        Gradual(),
         GrimTrigger(),
         Majority(MajorityType.HARD),
         Majority(MajorityType.SOFT),

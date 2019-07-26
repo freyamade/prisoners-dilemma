@@ -25,7 +25,7 @@ The follow strategies have no title in the referenced list;
     - Cooperates on the first move, and only defects after the opponent defects two times.
 - [ ] Two Tits for Tat
     - Same as Tit For Tat except it defects twice whenever the opponent defects.
-- [ ] Gradual
+- [x] Gradual
     - Cooperates on the first move, and continues to do so until the opponent defects.
     - After the nth defect, responds with n consecutive defections and then 2 cooperates.
 - [x] Soft Majority
