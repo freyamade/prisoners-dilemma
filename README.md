@@ -8,21 +8,21 @@ The Prisoner's Dilemma was an assignment I had to do in my Java module in 2nd ye
 
 
 The premise was simple, implement a basic form of the Prisoner's Dilemma in Java, with the following play styles;
-    - Rand              - A equal random chance to Cooperate or Defect.
-    - Nice Tit-for-Tat  - Start by cooperating, then play the opponent's previous move.
-    - Nasty Tit-for-Tat - Start by defecting, then play the opponent's previous move.
-    - Soft Majority     - Play the move the opponent has used most, using Cooperate in a tie.
-    - Hard Majority     - Play the move the opponent has used most, using Defect in a tie.
+- Rand              - A equal random chance to Cooperate or Defect.
+- Nice Tit-for-Tat  - Start by cooperating, then play the opponent's previous move.
+- Nasty Tit-for-Tat - Start by defecting, then play the opponent's previous move.
+- Soft Majority     - Play the move the opponent has used most, using Cooperate in a tie.
+- Hard Majority     - Play the move the opponent has used most, using Defect in a tie.
 
 Every prisoner is paired with every other prisoner, excluding itself, and they then play a game of Iterated Prisoner's Dilemma for *n* rounds.
 After every prisoner has played every other prisoner, a league table should be printed showing the strategy and the total number of points earned.
 
 Some extensions were given too;
-    - Extend the program to include new strategies
-        - For this, I found [this list](http://www.prisoners-dilemma.com/strategies.html) and did as many as I could within the timeframe for the assignment.
-    - Extend the program to use Axelrod's original formula, which allowed Prisoners to play themselves.
-        - Requires a little thought as only one set of points should be earned.
-    - Evolution Tournament
+- Extend the program to include new strategies
+    - For this, I found [this list](http://www.prisoners-dilemma.com/strategies.html) and did as many as I could within the timeframe for the assignment.
+- Extend the program to use Axelrod's original formula, which allowed Prisoners to play themselves.
+    - Requires a little thought as only one set of points should be earned.
+- Evolution Tournament
 
 ## Evolution Tournament
 This was the last thing I remember trying, and I remember being unable to tell if I had succeeded or not.
