@@ -22,7 +22,8 @@ fun main() {
         ReverseTitForTat(),
         TitForTat(TitForTatType.NASTY),
         TitForTat(TitForTatType.NICE),
-        TitForTwoTats()
+        TitForTwoTats(),
+        TwoTitsForTat()
     )
 
     // Create and run a RoundRobin tournament.

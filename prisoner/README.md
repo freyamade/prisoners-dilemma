@@ -23,7 +23,7 @@ The follow strategies have no title in the referenced list;
     - Temptation is (true, false), reward is (true, true).
 - [x] Tit for Two Tats
     - Cooperates on the first move, and only defects after the opponent defects two times.
-- [ ] Two Tits for Tat
+- [x] Two Tits for Tat
     - Same as Tit For Tat except it defects twice whenever the opponent defects.
 - [x] Gradual
     - Cooperates on the first move, and continues to do so until the opponent defects.
