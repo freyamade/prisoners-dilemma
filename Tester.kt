@@ -14,6 +14,7 @@ fun main() {
         GrimTrigger(),
         Majority(MajorityType.HARD),
         Majority(MajorityType.SOFT),
+        Pavlov(),
         Periodic(true, true, false),
         Periodic(true, false),
         Periodic(false, false, true),
