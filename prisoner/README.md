@@ -21,7 +21,7 @@ The follow strategies have no title in the referenced list;
 - [x] Pavlov
     - Cooperates on the first move. If a reward or temptation payoff is received in the last round, then repeats last choice, otherwise uses opposite choice.
     - Temptation is (true, false), reward is (true, true).
-- [ ] Tit for Two Tats
+- [x] Tit for Two Tats
     - Cooperates on the first move, and only defects after the opponent defects two times.
 - [ ] Two Tits for Tat
     - Same as Tit For Tat except it defects twice whenever the opponent defects.
