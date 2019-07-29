@@ -12,22 +12,39 @@ class RoundRobin(private val prisoners: Array<Prisoner>, private val bouts: Int)
      */
     fun run(verbose: Boolean = false) {
         // Print out a header for the tournament.
-        println("Running a round robin tournament, with $bouts bouts per match, and ${prisoners.size} prisoners.")
-        for (i in 0..(prisoners.size - 1)) {
+        println("Running a round robin tournament, with $bouts bouts per match, and ${this.prisoners.size} prisoners.")
+        for (i in 0..(this.prisoners.size - 1)) {
             // Start at (i + 1) since we don't currently handle Prisoners playing themselves.
-            for (j in (i + 1)..(prisoners.size - 1)) {
-                val match = Match(prisoners[i], prisoners[j], bouts)
+            for (j in (i + 1)..(this.prisoners.size - 1)) {
+                val match = Match(this.prisoners[i], this.prisoners[j], bouts)
                 match.play(verbose)
             }
         }
 
         // After the tournament is over, print out a table from highest to lowest points.
         // Sort the prisoners Array
-        prisoners.sortBy({prisoner -> -prisoner.score})
+        this.prisoners.sortBy({prisoner -> -prisoner.score})
 
-        // Print out the prisoners in order.
-        for (prisoner in prisoners) {
-            println("$prisoner\n\tScore: ${prisoner.score}")
+        // Draw a nice table
+        this.renderTable()
+    }
+
+    private fun renderTable() {
+        // Firstly, generate the column sizes.
+        val column1Size = this.prisoners.map({prisoner -> prisoner.strategy.length}).max()!!
+        var maxScore = this.prisoners.map({prisoner -> prisoner.score}).max()!!
+        var column2Size = 0
+        while (maxScore > 0) {
+            maxScore = maxScore / 10
+            column2Size++
         }
+
+        // Print the table
+        val row = "│ %-${column1Size}s │ %${column2Size}s │"
+        println("┌${"─".repeat(column1Size + 2)}┬${"─".repeat(column2Size + 2)}┐")
+        for (prisoner in this.prisoners) {
+            println(row.format(prisoner.strategy, prisoner.score))
+        }
+        println("└${"─".repeat(column1Size + 2)}┴${"─".repeat(column2Size + 2)}┘")
     }
 }
