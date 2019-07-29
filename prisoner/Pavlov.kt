@@ -22,4 +22,12 @@ class Pavlov : Prisoner("Pavlov") {
         this.lastMove = this.move
         return this.move
     }
+
+    /**
+     * Override the reset function to set the starting move back to true
+     */
+    override fun reset() {
+        this.move = true
+        super.reset()
+    }
 }
