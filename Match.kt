@@ -48,9 +48,13 @@ class Match {
             println("\nMatch between $prisoner1 and $prisoner2")
         }
 
+        if (this.prisoner1 == this.prisoner2) {
+            playSelf(verbose)
+            return
+        }
+
         // Play each bout
         for (bout in 0..this.bouts) {
-            // Start by assuming that the Prisoners cannot play themselves.
             val move1 = prisoner1.play()
             val move2 = prisoner2.play()
 
@@ -72,5 +76,30 @@ class Match {
         // After the Match is over, reset the memories of the prisoners
         prisoner1.reset()
         prisoner2.reset()
+    }
+
+    /**
+     * Separate function to handle Prisoners playing themselves
+     */
+    private fun playSelf(verbose: Boolean) {
+        // Play each bout
+        for (bout in 0..this.bouts) {
+            val move = prisoner1.play()
+
+            // Get the scores for each prisoner
+            val score = scoreMatrix[Pair(move, move)]!!
+
+            // Update the Prisoners' scores
+            prisoner1.addPoints(score)
+
+            // Print out debug info if verbose is true
+            if (verbose) {
+                println("Round #$bout - Move: $move.")
+                println("\tScore: $score.")
+            }
+        }
+
+        // After the Match is over, reset the memory of the prisoner
+        prisoner1.reset()
     }
 }
