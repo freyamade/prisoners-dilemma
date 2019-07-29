@@ -4,7 +4,7 @@ package de.freyama.prisoners_dilemma.prisoner
  * A prisoner that uses the opposite of move that the opponent used last round.
  * Will start by defecting before starting into this pattern.
  */
-class ReverseTitForTat : Prisoner("Reverse TitForTat") {
+class ReverseTitForTat : Prisoner("TitForTat (REVERSE)") {
 
     /**
      * Make a move by playing the opposite of the opponent's last move, defecting if there is none.
