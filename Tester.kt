@@ -14,13 +14,14 @@ fun main() {
         GrimTrigger(),
         Majority(MajorityType.HARD),
         Majority(MajorityType.SOFT),
-        Rand(),
-        TitForTat(TitForTatType.NASTY),
-        TitForTat(TitForTatType.NICE),
         Periodic(true, true, false),
         Periodic(true, false),
         Periodic(false, false, true),
-        Periodic(false, true)
+        Periodic(false, true),
+        Rand(),
+        ReverseTitForTat(),
+        TitForTat(TitForTatType.NASTY),
+        TitForTat(TitForTatType.NICE)
     )
     val bouts: Int = 100
 
