@@ -18,7 +18,7 @@ The follow strategies have no title in the referenced list;
     - `TitForTat(NICE)`
 - [x] Grim Trigger
     - Cooperates until opponent defects, after which it always defects
-- [ ] Pavlov
+- [x] Pavlov
     - Cooperates on the first move. If a reward or temptation payoff is received in the last round, then repeats last choice, otherwise uses opposite choice.
     - Temptation is (true, false), reward is (true, true).
 - [ ] Tit for Two Tats
@@ -58,7 +58,7 @@ The follow strategies have no title in the referenced list;
 - [ ] Contrite Tit for Tat
     - Same as Tit for Tat when there's no noise. In a noise environment, once it receives T by error, then it cooperates twice to recover mutual cooperation.
     - What I imagine this means is that when it gets T, cooperate twice?
-- [ ] Reverse Tit for tat
+- [x] Reverse Tit for tat
     - Defects on first move, then plays the opposite of the opponent's previous move.
 
 ## Adaptive Strategies
